@@ -118,7 +118,7 @@ var barcode;
 try {
     // смотри описание структуры barcode в ./typings/parser.d.ts
     barcode = GS1_BarcodeParser.parse(code)
-    barcode.fnc1Prefix = ']d2';
+
     // Проверка по GTIN и SERIAL
     if (barcode && barcode.hasAI(AIS.GTIN) && barcode.hasAI(AIS.SERIAL)) {
         // Тут мы можем быть точно уверены, что штрих-код корректный 
