@@ -1,4 +1,7 @@
- var BarcodeListener = (function(window, document) {
+// @author: asakasinsky
+// @url: https://github.com/asakasinsky/Barcode
+
+var BarcodeListener = (function(window, document) {
         var BarcodeListener = function(options) {
             if (BarcodeListener.instance) {
                 return BarcodeListener.instance;

@@ -1,4 +1,7 @@
 // @ts-check
+// @author: asakasinsky
+// @url: https://github.com/asakasinsky/Barcode
+
 var GS1_BarcodeParser = (function (window, document) {
     'use strict';
     var Utils = {
@@ -132,7 +135,7 @@ var GS1_BarcodeParser = (function (window, document) {
 
         /**
          * @param {string} data 
-         * @returns {GS1_FNC1} 
+         * @returns {import("./typings/parser").GS1_FNC1} 
          */
         fetchFNC1Prefix: function (data) {
             // @ts-ignore
@@ -198,7 +201,7 @@ var GS1_BarcodeParser = (function (window, document) {
          * 
          * @param {string} data 
          * 
-         * @returns {GS1_Barcode}
+         * @returns {import("./typings/parser").GS1_Barcode}
          */
         parse: function (data) {
             var currentPosition = 0;
