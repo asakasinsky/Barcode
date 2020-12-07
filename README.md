@@ -1,4 +1,4 @@
-## Barcode Scanner TAB-Code Capture
+##  TAB-Code Capturing From Barcode Scanner
 
 Испольуемый сканер: Poscenter HH 2D HH.
 
@@ -83,7 +83,7 @@ document.addEventListener('barcode', function(e) {
 
 
 
-## Barcode Parser
+## Barcode Parsing
 
 ``` js
 // AI - GS1 Application Identifier 
