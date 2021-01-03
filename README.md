@@ -90,18 +90,18 @@ var bs = new BarcodeCapture({
 });
 
 $('button').on('click', function() {
-    bs.enable();
+    bs.start();
 });
 
 // JQuery
 $(document).on('barcode', function(e, str) {
-    bs.disable()
+    bs.stop()
     alert(e.detail.sequence);
 });
 
 // Vanilla JS
 document.addEventListener('barcode', function(e) {
-    bs.disable()
+    bs.stop()
     alert(e.detail.sequence);
 });
 ```
