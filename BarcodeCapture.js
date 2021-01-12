@@ -1,4 +1,3 @@
-
 var BarcodeCapture = (function(document) {
     var BarcodeCapture = function(options) {
         if (BarcodeCapture.instance) {
@@ -13,6 +12,9 @@ var BarcodeCapture = (function(document) {
                 },
                 stop: function() {
                     _that.stopCapture();
+                },
+                test: function(str) {
+                    _that.test(str);
                 },
                 toString: function() {
                     return "[object BarcodeCapture]";
@@ -183,6 +185,21 @@ var BarcodeCapture = (function(document) {
             event.target.tagName.toLowerCase()
         ) !== -1;
     };
+  
+    BarcodeCapture.prototype.test = function (altCodeSsequence) {
+        var body = document.body;
+        var evt;
+        var code;
+        for (let i = 0; i < altCodeSsequence.length; i++) {
+            code = altCodeSsequence[i].charCodeAt(0)
+            evt = new KeyboardEvent('keyup', {
+                'bubbles':true, 
+                'keyCode':code, 
+                'which':code
+            }); 
+          body.dispatchEvent(evt);
+        }
+    }
 
     return BarcodeCapture;
 })(document);
